@@ -16,3 +16,7 @@ describe port(80) do
   it { should_not be_listening }
   skip 'This is an example test, replace with your own test.'
 end
+
+describe user('hab') do
+  its('group') { should eq 'hab' }
+end
